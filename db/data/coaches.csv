@@ -1,0 +1,27 @@
+// Placeholder for booking appointment logic
+
+// Example: Event listener to handle appointment booking
+document.addEventListener("click", function(event) {
+  if (event.target.classList.contains("timeslot")) {
+    const selectedTimeslot = event.target.textContent;
+    if (!event.target.classList.contains("booked")) {
+      // Placeholder: Send a request to book the selected timeslot
+      // For example, update availability in the database or API
+      // Once booking is successful, update the UI
+      event.target.classList.add("booked");
+      event.target.textContent = `Booked: ${selectedTimeslot}`;
+      
+      // Example: Display confirmation message
+      const confirmedCoach = selectedCoach.name;
+      const confirmedDateTime = selectedTimeslot;
+      const confirmedCoachElement = document.getElementById("confirmed-coach");
+      const confirmedDateTimeElement = document.getElementById("confirmed-date-time");
+      confirmedCoachElement.textContent = confirmedCoach;
+      confirmedDateTimeElement.textContent = confirmedDateTime;
+      
+      // Placeholder: Redirect to the confirmation page or show a modal
+      // For example, redirect to appointment_confirmation.html
+      window.location.href = `appointment_confirmation.html`;
+    }
+  }
+});
